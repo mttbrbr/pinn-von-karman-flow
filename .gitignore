@@ -3,6 +3,10 @@ __pycache__/
 *.py[codz]
 *$py.class
 
+pinn_env/
+results_karman.csv
+
+
 model/
 *.vtu
 *.npz
