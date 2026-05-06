@@ -11,7 +11,7 @@ if not os.path.exists("model"):
     os.makedirs("model")
 
 # --- 1. PARAMETRI FISICI ---
-Re = 200
+Re = 20
 nu = 1 / Re
 T_max = 10.0
 
@@ -91,7 +91,7 @@ model = dde.Model(data, net)
 
 # Callback per salvataggio pesi
 checkpointer = dde.callbacks.ModelCheckpoint(
-    "model/pinn_karman", save_every=1000, verbose=1
+    "model/pinn_karman", period=1000, verbose=1
 )
 
 # --- 6. TRAINING STRATEGY ---
